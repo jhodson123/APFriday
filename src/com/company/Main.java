@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) throws IOException{
 
         Scanner sf = new Scanner(new File("scores.txt"));
-        School[] schools = new School[434];
+        School[] schools = new School[386];
 
         String first = "";
         String second = "";
@@ -28,18 +28,19 @@ public class Main {
 
             if(text.length > 19){
                 schools[++index] = new School(text[1], text[18], text[19], text[20]);
-                //System.out.println(schools[index].schoolName + ": " + schools[index].getScore());
+                System.out.println(schools[index].schoolName + ": " + schools[index].getScore());
             }
         }
         sf.close();
 
-        for (School s: schools){
+        //This was supposed to get the top three schools but we didn't finish it
+        /*for (School s: schools){
 
             if (!(s.equals(null)))
                 System.out.println(s.schoolName);
 
 
-        }
+        }*/
 
         System.out.println("First: " + sfirst.schoolName + "\n" +
                 "Second: " + ssecond.schoolName + "\n" +
